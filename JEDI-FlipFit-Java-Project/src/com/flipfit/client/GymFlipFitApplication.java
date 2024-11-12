@@ -37,7 +37,7 @@ public class GymFlipFitApplication {
 
 
                 System.out.println("""
-                        Type:
+                        Select an option:
                          1 -> Login
                          2 -> Registration of Customer
                          3 -> Registration of Gym Owner
@@ -48,10 +48,10 @@ public class GymFlipFitApplication {
 
                 switch (choice) {
                     case 1: {
-                        System.out.println("=========== Login ===========");
-                        System.out.print("Enter your emailId:> ");
+                        System.out.println(" Login ");
+                        System.out.print("EmailId:> ");
                         String username = in.next();
-                        System.out.print("Enter your password:> ");
+                        System.out.print("Password:> ");
                         String password = in.next();
                         System.out.print("Enter your role:> Customer/Admin/GymOwner ");
                         String role = in.next();
@@ -72,7 +72,7 @@ public class GymFlipFitApplication {
                                 String currentDateTime = DateAndTime.getCurrentDateTime();
                                 System.out.println("Login successful at: " + currentDateTime);
 
-                                System.out.println("\n=========== Customer Menu ===========");
+                                System.out.println("\nCustomer Menu");
                                 GymFlipFitCustomerMenu.getFlipFitCustomerMenu(gymCustomer);
                                 break;
                             }
@@ -87,7 +87,7 @@ public class GymFlipFitApplication {
                                 if (res) {
                                     String currentDateTime = DateAndTime.getCurrentDateTime();
                                     System.out.println("Login successful at: " + currentDateTime);
-                                    System.out.println("=========== Admin Menu ===========");
+                                    System.out.println("Admin Menu");
                                     GymFlipFitAdminMenu.getAdminView();
                                 }
                                 break;
@@ -105,7 +105,7 @@ public class GymFlipFitApplication {
                                     throw new IllegalStateException("Invalid credentials");
                                 String currentDateTime = DateAndTime.getCurrentDateTime();
                                 System.out.println("Login successful at: " + currentDateTime);
-                                System.out.println("=========== GymOwner Menu ===========");
+                                System.out.println(" GymOwner Menu ");
                                 GymFlipFitOwnerMenu.getFlipFitOwnerView(gymOwner);
                                 break;
                             }
@@ -114,7 +114,7 @@ public class GymFlipFitApplication {
                     }
 
                     case 2: {
-                        System.out.println("=========== Registration of Gym Customer ===========");
+                        System.out.println("Registration of Gym Customer");
 
                         System.out.print("Enter your email address:> ");
                         String emailID = in.next();
@@ -155,14 +155,14 @@ public class GymFlipFitApplication {
                         flipFitGymCustomer = GCBservice.registerCustomer(flipFitGymCustomer);
                         gymCustomer.setUserID(flipFitGymCustomer.getUserId());
                         System.out.println("Registration completed for " + gymCustomer.getUserName());
-                        System.out.println("=========== Customer Menu ===========");
+                        System.out.println("Customer Menu");
 
                         GymFlipFitCustomerMenu.getFlipFitCustomerMenu(gymCustomer);
                         break;
                     }
 
                     case 3: {
-                        System.out.println("=========== Registration of Gym Owner ===========");
+                        System.out.println("Registration of Gym Owner");
 
                         System.out.print("Enter your email address:> ");
                         String emailID = in.next();

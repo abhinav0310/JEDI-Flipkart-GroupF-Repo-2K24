@@ -41,7 +41,7 @@ public class GymFlipFitAdminMenu {
                 choice = sc.nextInt();
                 switch (choice) {
                     case 1: {
-                        System.out.println("=========== View Pending Requests =========== ");
+                        System.out.println("View Pending Requests");
 
                         List<FlipFitGymOwner> flipFitGymOwnerList = adminService.getPendingOwnerList();
 
@@ -64,7 +64,7 @@ public class GymFlipFitAdminMenu {
                     }
 
                     case 2: {
-                        System.out.println("=========== View Approved Owners =========== " );
+                        System.out.println("View Approved Owners" );
 
                         List<FlipFitGymOwner> flipFitGymOwnerList = adminService.getApprovedOwnerList();
                         for (FlipFitGymOwner flipFitGymOwner : flipFitGymOwnerList) {
@@ -75,7 +75,7 @@ public class GymFlipFitAdminMenu {
                     }
 
                     case 3: {
-                        System.out.println("=========== View all FlipFit Customers =========== ");
+                        System.out.println("View all FlipFit Customers");
 
                         List<FlipFitGymCustomer> customersList = adminService.getUserList();
                         for (FlipFitGymCustomer customers : customersList) {
@@ -86,7 +86,7 @@ public class GymFlipFitAdminMenu {
                     }
 
                     case 4: {
-                        System.out.println("=========== View Centres Using OwnerId =========== ");
+                        System.out.println("View Centres Using OwnerId");
 
                         System.out.print("Type the ownerId of the owner for which you wish to view Centres:> ");
                         Scanner in = new Scanner(System.in);

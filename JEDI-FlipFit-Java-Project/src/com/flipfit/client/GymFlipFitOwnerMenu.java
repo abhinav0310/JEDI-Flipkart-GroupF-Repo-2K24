@@ -43,7 +43,7 @@ public class GymFlipFitOwnerMenu {
 
                 switch (choice) {
                     case 1: {
-                        System.out.println( "=========== Add Centre =========== " );
+                        System.out.println( "Add Centre" );
 
                         Scanner scanner = new Scanner(System.in);
                         int ownerID = gymOwner.getUserID();
@@ -75,7 +75,7 @@ public class GymFlipFitOwnerMenu {
                     }
 
                     case 2: {
-                        System.out.println("=========== View Centres for the owner =========== ");
+                        System.out.println("View Centres for the owner");
 
                         FlipFitGymOwner flipFitGymOwner = new FlipFitGymOwner();
                         flipFitGymOwner.setUserId(gymOwner.getUserID());
@@ -89,7 +89,7 @@ public class GymFlipFitOwnerMenu {
                     }
 
                     case 3: {
-                        System.out.println("=========== Add Slot in a Gym =========== ");
+                        System.out.println("Add Slot in a Gym");
 
                         System.out.print("Enter gym centre ID:> " );
                         int centreId = sc.nextInt();
@@ -114,7 +114,7 @@ public class GymFlipFitOwnerMenu {
                     }
 
                     case 4: {
-                        System.out.println("=========== Delete Slot =========== " );
+                        System.out.println("Delete Slot" );
 
                         System.out.print("Enter centre ID:> ");
                         int centreId = sc.nextInt();

@@ -53,7 +53,7 @@ public class GymFlipFitCustomerMenu {
 
                 switch (choice) {
                     case 1: {
-                        System.out.println("=========== View Booked Slots ===========");
+                        System.out.println("View Booked Slots");
                         FCBservice.viewBookedSlots(userId);
 
                         System.out.println("Type 1. If you wish to cancel");
@@ -70,7 +70,7 @@ public class GymFlipFitCustomerMenu {
                         break;
                     }
                     case 2: {
-                        System.out.println("=========== View Centres ===========");
+                        System.out.println("View Centres");
 
                         List<FlipFitGymCentre> centreList = FCBservice.viewCentres();
                         for (FlipFitGymCentre centre : centreList) {

@@ -26,6 +26,16 @@ import java.time.LocalTime;
 public class FlipFitGymOwnerRestController {
     GymOwnerBusiness service = new GymOwnerBusinessImpl();
 
+    /**
+     * Endpoint to create a new gym owner profile.
+     *
+     * @param name The name of the gym owner.
+     * @param email The email address of the gym owner.
+     * @param address The address of the gym owner.
+     * @param pwd The password for the gym owner's account.
+     * @param contact The contact number of the gym owner.
+     * @return A success or failure message indicating whether the profile was created.
+     */
     @POST
     @Path("/createowner")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -47,6 +57,15 @@ public class FlipFitGymOwnerRestController {
         }
     }
 
+    /**
+     * Endpoint to register a new gym center for an owner.
+     *
+     * @param centername The name of the gym center.
+     * @param centerloc The location of the gym center.
+     * @param noofslots The number of available slots at the gym center.
+     * @param ownerId The ID of the gym owner registering the center.
+     * @return A message indicating whether the gym center was registered successfully.
+     */
 
     @POST
     @Path("/registercenter")
@@ -63,6 +82,17 @@ public class FlipFitGymOwnerRestController {
             return "Registration Failed";
 
     }
+
+    /**
+     * Endpoint to add a new time slot for a specific gym center.
+     *
+     * @param centerid The ID of the gym center where the slot is to be added.
+     * @param starttime The start time of the slot.
+     * @param endtime The end time of the slot.
+     * @param noofseats The number of available seats in the slot.
+     * @param costs The cost of the slot.
+     * @return A success or failure message indicating whether the slot was added.
+     */
 
     @POST
     @Path("/addslot")
@@ -84,6 +114,14 @@ public class FlipFitGymOwnerRestController {
 
     }
 
+    /**
+     * Endpoint to delete a specific time slot for a gym center.
+     *
+     * @param centerid The ID of the gym center from which the slot is to be deleted.
+     * @param starttime The start time of the slot to delete.
+     * @return A message indicating whether the slot was deleted successfully.
+     */
+
     @DELETE
     @Path("/deleteslot")
     public String deleteslot(
@@ -99,6 +137,13 @@ public class FlipFitGymOwnerRestController {
 
     }
 
+    /**
+     * Endpoint to delete a specific gym center.
+     *
+     * @param centerid The ID of the gym center to delete.
+     * @return A message indicating whether the gym center was deleted successfully.
+     */
+
     @DELETE
     @Path("/{centerid}/deletecenter")
     public String deletecenter(@PathParam("centerid") Integer centerid) {
@@ -109,6 +154,17 @@ public class FlipFitGymOwnerRestController {
 
     }
 
+    /**
+     * Endpoint to edit the profile information of a gym owner.
+     *
+     * @param name The updated name of the gym owner.
+     * @param email The updated email address of the gym owner.
+     * @param address The updated address of the gym owner.
+     * @param pwd The updated password for the gym owner's account.
+     * @param contact The updated contact number of the gym owner.
+     * @param ownerId The ID of the gym owner whose profile is to be edited.
+     * @return A success or failure message indicating whether the profile was updated.
+     */
     @PUT
     @Path("/editprofile")
     public String editprofile(

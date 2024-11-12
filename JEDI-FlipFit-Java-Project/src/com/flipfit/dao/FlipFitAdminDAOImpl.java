@@ -157,7 +157,7 @@ public class FlipFitAdminDAOImpl implements  IFlipFitAdminDAO {
     @Override
     public List<FlipFitGymCentre> getGymCentreUsingOwnerId(int ownerId) {
         List<FlipFitGymCentre> gymCentres = new ArrayList<>();
-        String sql = "SELECT * FROM GymCentre WHERE ownerID = ? AND approved = 1";
+        String sql = "SELECT * FROM GymCentre WHERE ownerID = ?";
 
         try (Connection conn = GetConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {

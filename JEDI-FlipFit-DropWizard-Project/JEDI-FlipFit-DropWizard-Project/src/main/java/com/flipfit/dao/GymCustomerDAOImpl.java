@@ -198,7 +198,7 @@ public class GymCustomerDAOImpl implements GymCustomerDAO {
             statement.setInt(1, bookingID);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
-                int custId = resultSet.getInt(1);
+                int custId = resultSet.getInt(2);
                 if(custId != customerId){
                     throw new UnauthorisedAccessException("You are not authorized to cancel bookings of other customers");
                 }
