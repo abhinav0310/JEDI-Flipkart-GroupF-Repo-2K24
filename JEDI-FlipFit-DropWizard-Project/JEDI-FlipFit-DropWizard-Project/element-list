@@ -1,0 +1,8 @@
+com.flipfit
+com.flipfit.app
+com.flipfit.bean
+com.flipfit.business
+com.flipfit.dao
+com.flipfit.exceptions
+com.flipfit.rest
+com.flipfit.utils
